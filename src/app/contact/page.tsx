@@ -19,15 +19,29 @@ export default function ContactPage() {
         e.preventDefault();
         setIsSubmitting(true);
 
-        // Simulate form submission
-        await new Promise((resolve) => setTimeout(resolve, 1500));
+        try {
+            const response = await fetch("https://formspree.io/f/xzdzrnpj", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
 
-        setIsSubmitting(false);
-        setIsSubmitted(true);
-        setFormData({ name: "", email: "", subject: "", message: "" });
-
-        // Reset success message after 5 seconds
-        setTimeout(() => setIsSubmitted(false), 5000);
+            if (response.ok) {
+                setIsSubmitting(false);
+                setIsSubmitted(true);
+                setFormData({ name: "", email: "", subject: "", message: "" });
+                // Reset success message after 5 seconds
+                setTimeout(() => setIsSubmitted(false), 5000);
+            } else {
+                alert("Failed to send message");
+                setIsSubmitting(false);
+            }
+        } catch (error) {
+            alert("Failed to send message");
+            setIsSubmitting(false);
+        }
     };
 
     const handleChange = (
@@ -43,7 +57,7 @@ export default function ContactPage() {
         {
             name: "Instagram",
             icon: <Instagram size={24} />,
-            href: "https://instagram.com/art.png__",
+            href: "https://instagram.com/art.png_",
             handle: "@art.png_",
         },
         {

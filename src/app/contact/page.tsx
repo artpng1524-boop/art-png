@@ -43,20 +43,20 @@ export default function ContactPage() {
         {
             name: "Instagram",
             icon: <Instagram size={24} />,
-            href: "https://instagram.com/art.png",
-            handle: "@art.png",
+            href: "https://instagram.com/art.png__",
+            handle: "@art.png_",
         },
         {
             name: "GitHub",
             icon: <Github size={24} />,
-            href: "https://github.com/artpng",
-            handle: "@artpng",
+            href: "https://github.com/artpng1524-boop",
+            handle: "@artpng1524-boop",
         },
         {
             name: "LinkedIn",
             icon: <Linkedin size={24} />,
-            href: "https://linkedin.com/in/artpng",
-            handle: "ART.PNG",
+            href: "https://linkedin.com/in/art-png",
+            handle: "art png",
         },
     ];
 
@@ -238,10 +238,10 @@ export default function ContactPage() {
                                         <div>
                                             <p className="font-medium mb-1">Email</p>
                                             <a
-                                                href="mailto:hello@artpng.com"
+                                                href="mailto:art.png1524@gmail.com"
                                                 className="text-muted-foreground hover:text-gold transition-colors"
                                             >
-                                                hello@artpng.com
+                                                art.png1524@gmail.com
                                             </a>
                                         </div>
                                     </div>
@@ -262,7 +262,7 @@ export default function ContactPage() {
 
                             {/* Social Links */}
                             <div className="p-8 rounded-3xl bg-card border border-border">
-                                <h2 className="text-2xl font-bold mb-6">Follow Me</h2>
+                                <h2 className="text-2xl font-bold mb-6">Follow Us</h2>
                                 <div className="space-y-4">
                                     {socialLinks.map((social, index) => (
                                         <motion.a
@@ -319,7 +319,7 @@ export default function ContactPage() {
                 <footer className="mt-24 py-8 px-4 border-t border-border">
                     <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
                         <span className="text-muted-foreground text-sm">
-                            © 2024 ART.PNG. All rights reserved.
+                            © 2026 ART.PNG. All rights reserved.
                         </span>
                         <span className="text-gradient-gold font-semibold">ART.PNG</span>
                     </div>

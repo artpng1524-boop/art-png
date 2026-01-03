@@ -135,8 +135,8 @@ export default function ProjectsPage() {
                                 key={category}
                                 onClick={() => setActiveCategory(category)}
                                 className={`px-6 py-2.5 rounded-full font-medium transition-all duration-300 ${activeCategory === category
-                                        ? "bg-gradient-gold text-black"
-                                        : "bg-card border border-border hover:border-gold/50"
+                                    ? "bg-gradient-gold text-black"
+                                    : "bg-card border border-border hover:border-gold/50"
                                     }`}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.98 }}
